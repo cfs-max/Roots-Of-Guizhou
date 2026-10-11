@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ROOTS OF GUIZHOU · 黔地之根</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ============ L1 欢迎页 ============ -->
+    <section id="welcome" class="view">
+      <div class="welcome-top">Roots of Guizhou｜黔地之根｜An Ethnobotanical Archive of Medicinal Plants in Guizhou｜</div>
+      <div class="welcome-center">
+        <h1 id="welcomeTitle" class="welcome-title">ROOTS OF GUIZHOU</h1>
+        <p class="welcome-hint">Click the title to start your herb-gathering journey ⬆️</p>
+      </div>
+    </section>
+
+    <!-- ============ L2 地图页 ============ -->
+    <section id="map" class="view hidden">
+      <div class="back-float" id="mapBack">
+        <svg class="back-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+          <path d="M137.195012 473.012753l343.015525-236.983218-0.308863 468.654345z"/>
+          <path d="M480.667511 706.240841l-1.146949-0.774868L135.66695 473.021784 480.978181 234.452705v1.578636l-0.31067 470.2095zM138.723073 473.003722L479.135837 703.125112l0.308863-465.518748L138.723073 473.003722z"/>
+          <path d="M807.983377 647.341831s-7.347701-39.173288-31.538398-63.073184-18.555293-18.331321-30.10426-28.670122-57.340243-34.404868-70.879664-14.921179-394.378989 0.050574-394.378989 0.050574V413.73263s214.893154-3.375824 285.431443 11.417113c20.932277 4.389113 57.967001 10.044386 83.143895 22.935375 27.143866 13.900665 53.628462 34.040012 67.375598 50.173164 46.838883 54.974096 47.306694 149.083548 47.306694 149.083549z"/>
+        </svg>
+      </div>
+      <div class="map-wrap">
+        <div class="map-canvas" id="mapCanvas">
+          <img class="map-photo" src="assets/guizhou-map.png" alt="贵州景点总览" />
+          <!-- 景点 pin 由 app.js 注入 -->
+        </div>
+      </div>
+      <!-- 左弹窗：景点简介 -->
+      <div class="popup popup-left hidden" id="popupLeft">
+        <span class="close" data-close="left">×</span>
+        <h3 id="plName"></h3>
+        <div class="en" id="plEn"></div>
+        <p id="plIntro"></p>
+      </div>
+      <!-- 右弹窗：两种植物卡片 -->
+      <div class="popup popup-right hidden" id="popupRight">
+        <span class="close" data-close="right">×</span>
+        <h3 id="prTitle">本景点药用植物</h3>
+        <div class="en" id="prSub">Medicinal Plants here</div>
+        <div id="plCards"></div>
+      </div>
+    </section>
+
+    <!-- ============ L3 植物页 ============ -->
+    <section id="plant" class="view hidden">
+      <!-- 顶部三按钮：左=上一种植物 / 中=返回地图 / 右=下一种植物 -->
+      <div class="pattern-top plant-top">
+        <button id="btnPrev">← 上一种植物</button>
+        <button class="mid" id="btnMap">Back to Map</button>
+        <button id="btnNext">下一种植物 →</button>
+      </div>
+      <div class="plant-side left">
+        <div class="ptag" id="plLTag"></div>
+        <div id="plLText"></div>
+      </div>
+      <img class="plant-name-img" src="assets/plant-name.png" alt="植物名称" />
+      <div class="plant-center">
+        <img id="plantImg" alt="plant" />
+        <div class="plant-cta-en">Click on a plant to view its symbolic patterns and totems.</div>
+      </div>
+      <div class="plant-side right">
+        <div class="ptag" id="plRTag"></div>
+        <div id="plRText"></div>
+      </div>
+    </section>
+
+    <!-- ============ L4 纹路页 ============ -->
+    <section id="pattern" class="view hidden">
+      <div class="back-float" id="patternBack">
+        <svg class="back-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+          <path d="M137.195012 473.012753l343.015525-236.983218-0.308863 468.654345z"/>
+          <path d="M480.667511 706.240841l-1.146949-0.774868L135.66695 473.021784 480.978181 234.452705v1.578636l-0.31067 470.2095zM138.723073 473.003722L479.135837 703.125112l0.308863-465.518748L138.723073 473.003722z"/>
+          <path d="M807.983377 647.341831s-7.347701-39.173288-31.538398-63.073184-18.555293-18.331321-30.10426-28.670122-57.340243-34.404868-70.879664-14.921179-394.378989 0.050574-394.378989 0.050574V413.73263s214.893154-3.375824 285.431443 11.417113c20.932277 4.389113 57.967001 10.044386 83.143895 22.935375 27.143866 13.900665 53.628462 34.040012 67.375598 50.173164 46.838883 54.974096 47.306694 149.083548 47.306694 149.083549z"/>
+        </svg>
+      </div>
+      <img class="plant-name-img" id="patternNameImg" src="assets/plant-name.png" alt="植物名称" />
+      <div class="carousel">
+        <div class="nav prev" id="carPrev"><svg class="nav-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M628.48 756.053333a35.84 35.84 0 0 1-50.773333 0L341.333333 536.746667a35.84 35.84 0 0 1 0-52.48l235.52-220.586667a35.84 35.84 0 1 1 49.066667 52.48L419.413333 512l207.786667 194.56a35.84 35.84 0 0 1 1.28 49.493333zM512 0a512 512 0 1 0 512 512A512 512 0 0 0 512 0z" fill="#5E5C5C" p-id="4430"/></svg></div>
+        <img id="carImg" alt="pattern" />
+        <div class="nav next" id="carNext"><svg class="nav-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path d="M682.666667 536.746667l-235.52 220.586666a35.84 35.84 0 0 1-49.066667-52.48L603.733333 512 395.946667 315.733333a35.84 35.84 0 1 1 49.066666-52.48L682.666667 484.266667a35.84 35.84 0 0 1 0 52.48zM512 0a512 512 0 1 0 512 512A512 512 0 0 0 512 0z" fill="#5E5C5C" p-id="6404"/></svg></div>
+        <div class="dots" id="carDots"></div>
+      </div>
+      <div class="pattern-foot">
+        <div class="pf-item pf-left" id="pfLeft">CULTURAL SYMBOL | SUN / CIRCULAR LIFE SYMBOL.</div>
+        <div class="pf-item pf-right" id="pfRight">PATTERN | ROUND-LEAF MOTIFS, SUN MOTIFS, AND CONTINUOUS WATER-WAVE PATTERNS.</div>
+      </div>
+    </section>
+
+    <!-- 背景音乐 -->
+    <audio id="bgm" loop preload="auto" src="assets/ROOTS-OF-GUIZHOU.mp3"></audio>
+    <!-- 静音 / 播放按钮 -->
+    <button id="muteBtn" class="mute-btn" aria-label="背景音乐开关" title="背景音乐开关">
+      <svg class="ic-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 5 6 9H2v6h4l5 4V5Z"/>
+        <path d="M15.5 8.5a5 5 0 0 1 0 7"/>
+        <path d="M18.5 5.5a9 9 0 0 1 0 13"/>
+      </svg>
+      <svg class="ic-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 5 6 9H2v6h4l5 4V5Z"/>
+        <line x1="22" y1="9" x2="16" y2="15"/>
+        <line x1="16" y1="9" x2="22" y2="15"/>
+      </svg>
+    </button>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
