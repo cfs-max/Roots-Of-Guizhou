@@ -300,11 +300,16 @@ button {
 .pattern-name:active .cn { color: var(--terra); }
 .carousel {
   flex: 1; min-height: 0; width: 100%; display: flex; align-items: center; justify-content: center;
-  position: relative; padding: 5px 10px 20px;
+  position: relative; padding: 52px 10px 24px;   /* 顶部留白避开上方三按钮，避免重叠 */
 }
 .carousel img {
-  max-width: 82%; max-height: 100%; border-radius: 8px;
+  /* 固定展示尺寸：所有轮播图统一以正方形框呈现，object-fit 保证不变形、不裁切 */
+  width: min(320px, 70vw, 46vh);
+  height: min(320px, 70vw, 46vh);
+  object-fit: contain;
+  border-radius: 8px;
   border: 3px solid #fff; box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.45);   /* 透明/异形图也有统一底色框 */
 }
 .carousel .nav {
   position: absolute; top: 50%; transform: translateY(-50%);

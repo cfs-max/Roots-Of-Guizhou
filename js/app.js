@@ -257,6 +257,9 @@
   function openPattern(idx) {
     seqIndex = (idx + PLANT_SEQUENCE.length) % PLANT_SEQUENCE.length;
     carIndex = 0;
+    // 切换纹路页时同步右上角名称图（与 L3 同一逻辑）
+    const p = PLANT_SEQUENCE[seqIndex].plant;
+    document.getElementById('patternNameImg').src = p.nameImg || 'assets/plant-name.png';
     renderPattern();
     updatePlantNav();
     // 进入 L4：还原默认鼠标
