@@ -161,7 +161,7 @@
       // 卡片只显示植物主名，不显示拉丁名
       const mainName = a.plantEnOnly ? pl.nameEn : pl.name;
       card.innerHTML =
-        `<img class='pc-thumb' src='${pl.cardImg}' alt='${mainName}' />
+        `<div class='plant-thumb'><img class='pc-thumb' src='${pl.cardImg}' alt='${mainName}' /><span class='plant-dot'></span></div>
          <div><div class='pc-name${a.plantEnOnly ? ' en-title' : ''}'>${mainName}</div></div>`;
       card.addEventListener('click', () => openPlant(idx));
       box.appendChild(card);
