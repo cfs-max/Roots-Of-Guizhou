@@ -158,12 +158,14 @@ button {
 /* 左右弹窗 */
 .popup {
   position: absolute; top: 50%; transform: translateY(-50%);
-  width: 30%; min-width: 130px; max-width: 200px;
-  background: rgba(247,240,222,0.80);
-  -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
-  border: 1px solid rgba(47,93,63,0.4);
-  border-radius: 8px; padding: 13px 12px;
-  box-shadow: var(--shadow);
+  width: 30%; min-width: 130px; max-width: 215px;
+  /* 毛玻璃：底色更通透(0.55) + 更强模糊(10px) + 轻微增色，透出地图底图 */
+  background: rgba(247,240,222,0.55);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+  backdrop-filter: blur(10px) saturate(1.2);
+  border: 1px solid rgba(255,255,255,0.55);   /* 玻璃边缘高光 */
+  border-radius: 13px; padding: 14px 13px;
+  box-shadow: 0 10px 30px rgba(31,61,43,0.28), inset 0 1px 0 rgba(255,255,255,0.6);
   z-index: 5;
   max-height: 92vh; overflow-y: auto;
   transition: opacity .3s ease, transform .3s ease;
@@ -171,8 +173,8 @@ button {
 .popup-left { left: 14%; }
 .popup-right { right: 14%; }
 .popup h3 {
-  margin: 0 0 3px; font-size: 18px; color: var(--green-deep);
-  letter-spacing: 1px; border-bottom: 0.5px solid var(--paper-line); padding-bottom: 5px;
+  margin: 0 0 4px; font-size: 18px; color: var(--green-deep);
+  letter-spacing: 1px; border-bottom: 1px solid rgba(181,112,58,0.40); padding-bottom: 6px;
 }
 .popup h3.en-title { font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; letter-spacing: 0.5px; }
 .popup .en { font-size: 10.8px; color: var(--terra); letter-spacing: 0.5px; margin-bottom: 6px;
@@ -180,13 +182,20 @@ button {
 .popup p { margin: 0; font-size: 13.8px; line-height: 1.7; color: var(--ink); }
 .popup-attraction-img {
   display: block; width: 100%; max-width: 150px; height: auto;
-  border-radius: 6px; margin: 9px auto 7px;
-  border: 0.5px solid rgba(47,93,63,0.3);
-  background: rgba(255,255,255,0.4);
+  border-radius: 8px; margin: 10px auto 8px;
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 3px 10px rgba(31,61,43,0.22);
+  background: rgba(255,255,255,0.35);
 }
 .popup .close {
-  position: absolute; top: 5px; right: 7px; font-size: 18px; color: var(--ink-soft); line-height: 1;
+  position: absolute; top: 7px; right: 8px; font-size: 15px; color: #fff; line-height: 1;
+  width: 21px; height: 21px; border-radius: 50%; cursor: pointer;
+  background: rgba(181,112,58,0.85);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 1px 4px rgba(31,61,43,0.3);
+  transition: background .2s ease;
 }
+.popup .close:hover { background: rgba(181,112,58,1); }
 /* 右侧植物卡片 */
 .plant-card {
   display: flex; gap: 8px; align-items: center;
