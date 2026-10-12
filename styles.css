@@ -170,7 +170,7 @@ button {
   max-height: 92vh; overflow-y: auto;
   transition: opacity .3s ease, transform .3s ease;
 }
-.popup-left { left: 14%; }
+.popup-left { left: 3%; }
 .popup-right { right: 14%; }
 .popup h3 {
   margin: 0 0 4px; font-size: 18px; color: var(--green-deep);
