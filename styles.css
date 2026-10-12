@@ -345,17 +345,18 @@ button {
 }
 .dots i.on { background: var(--terra); }
 .pattern-foot {
-  display: flex; justify-content: space-between; align-items: flex-start;
-  width: 100%; padding: 6px 16px 12px; gap: 12px;
-  min-height: 56px;   /* 预留两行高度，避免左右脚注行数不同时整组垂直跳动 */
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+  width: 100%; padding: 6px 16px 12px; gap: 5px;
+  min-height: 56px;   /* 预留两行高度，避免脚注行数不同时整组垂直跳动 */
 }
 .pf-item {
   font-size: 10.8px; letter-spacing: 1px; line-height: 1.6;
-  color: var(--ink-soft); text-transform: uppercase;
+  color: var(--ink-soft); text-transform: uppercase; text-align: center;
+  max-width: 92%;
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
 }
-.pf-left { text-align: left; max-width: 46%; }
-.pf-right { text-align: right; max-width: 46%; }
+.pf-left { text-align: center; max-width: 92%; }
+.pf-right { text-align: center; max-width: 92%; }
 
 /* 返回浮钮（通用） */
 .back-float {
