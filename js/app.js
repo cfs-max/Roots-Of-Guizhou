@@ -144,7 +144,10 @@
       plEnEl.hidden = false;
     }
     document.getElementById('plIntro').textContent = a.intro;
+    const plImgEl = document.getElementById('plImg');
+    if (a.img) { plImgEl.src = a.img; plImgEl.hidden = false; } else { plImgEl.hidden = true; }
     popupLeft.classList.remove('hidden');
+    positionPopups();
     // 右弹窗：植物卡片（可按景点开关隐藏标题 / 只显示英文名）
     document.getElementById('prTitle').hidden = !!a.hidePlantHead;
     document.getElementById('prSub').hidden = !!a.hidePlantHead;
@@ -158,7 +161,8 @@
       // 卡片只显示植物主名，不显示拉丁名
       const mainName = a.plantEnOnly ? pl.nameEn : pl.name;
       card.innerHTML =
-        `<div><div class='pc-name${a.plantEnOnly ? ' en-title' : ''}'>${mainName}</div></div>`;
+        `<img class='pc-thumb' src='${pl.cardImg}' alt='${mainName}' />
+         <div><div class='pc-name${a.plantEnOnly ? ' en-title' : ''}'>${mainName}</div></div>`;
       card.addEventListener('click', () => openPlant(idx));
       box.appendChild(card);
     });
@@ -173,6 +177,33 @@
   document.querySelectorAll('[data-close]').forEach(b =>
     b.addEventListener('click', () => { document.getElementById(b.dataset.close === 'left' ? 'popupLeft' : 'popupRight').classList.add('hidden'); }));
   mapCanvas.addEventListener('click', closePopups);
+
+  // 让左右弹窗紧贴中央地图两侧，留 10px 间隙（窄屏空间不足时交回 CSS 百分比布局）
+  function positionPopups() {
+    if (!mapCanvas) return;
+    const root = document.getElementById('map');
+    const mapRect = mapCanvas.getBoundingClientRect();
+    const rootRect = root.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const gap = 10;
+    // 弹窗宽度（与 CSS：宽 30%，上限 200、下限 130 保持一致）
+    let pw = Math.min(vw * 0.30, 200);
+    if (pw < 130) pw = 130;
+    const leftEdge = mapRect.left - rootRect.left;
+    const rightEdge = mapRect.right - rootRect.left;
+    const leftSpace = leftEdge;
+    const rightSpace = vw - rightEdge;
+    if (leftSpace > pw + gap + 6 && rightSpace > pw + gap + 6) {
+      popupLeft.style.left = (leftEdge - pw - gap) + 'px';
+      popupLeft.style.right = 'auto';
+      popupRight.style.left = (rightEdge + gap) + 'px';
+      popupRight.style.right = 'auto';
+    } else {
+      popupLeft.style.left = ''; popupLeft.style.right = '';
+      popupRight.style.left = ''; popupRight.style.right = '';
+    }
+  }
+  window.addEventListener('resize', positionPopups);
 
   /* ---------- L3 植物页 ---------- */
   // 结构化字段块：[字段名, 值] → 字段名加粗 + 值换行；无 blocks 时回退为纯文本段落

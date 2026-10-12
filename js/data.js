@@ -8,6 +8,7 @@
 const ATTRACTIONS = [
   {
     id: 'fanjingshan',
+    img: 'assets/fanjingshan-attraction.webp',
     name: '梵净山',
     nameEn: 'Fanjingshan',
     x: 91.36, y: 21.00,         // 图中"梵净山"文字下方的墨圈圆心
@@ -18,6 +19,7 @@ const ATTRACTIONS = [
     plants: [
       {
         id: 'yuxingcao', name: '鱼腥草', nameEn: 'Yuxingcao / Zhe’ergen / Fish Mint', latin: 'Houttuynia cordata Thunb.', pinyin: 'Yu Xing Cao',
+        cardImg: 'assets/yuxingcao-card.webp',
         img: 'assets/yuxingcao-plant.webp',
         nameImg: 'assets/yuxingcao-name.png',
         patternImages: ['assets/yuxingcao-pattern-1.jpg', 'assets/yuxingcao-pattern-2.jpg', 'assets/yuxingcao-pattern-3.jpg'],
@@ -44,6 +46,7 @@ const ATTRACTIONS = [
       },
       {
         id: 'gouteng', name: '钩藤', nameEn: 'Gouteng / Uncaria', latin: 'Uncaria rhynchophylla (Miq.) Miq. ex Havil.', pinyin: 'Gou Teng',
+        cardImg: 'assets/gouteng-card.webp',
         img: 'assets/gouteng-plant.webp',
         nameImg: 'assets/gouteng-name.png',
         patternImages: ['assets/gouteng-pattern-1.jpg', 'assets/gouteng-pattern-2.jpg', 'assets/gouteng-pattern-3.jpg'],
@@ -70,6 +73,7 @@ const ATTRACTIONS = [
       },
       {
         id: 'banxia', name: '半夏', nameEn: 'Banxia / Pinellia', latin: 'Pinellia ternata (Thunb.) Makino', pinyin: 'Ban Xia',
+        cardImg: 'assets/banxia-card.webp',
         img: 'assets/banxia-plant.webp',
         nameImg: 'assets/banxia-name.png',
         patternImages: ['assets/banxia-pattern-1.jpg', 'assets/banxia-pattern-2.jpg'],
@@ -98,6 +102,7 @@ const ATTRACTIONS = [
   },
   {
     id: 'xijiang',
+    img: 'assets/xijiang-attraction.webp',
     name: '西江千户苗寨',
     nameEn: 'Xijiang Qianhu Miao Village',
     x: 88.33, y: 63.25,         // 图中"西江千户苗寨"文字下方的墨圈圆心
@@ -108,6 +113,7 @@ const ATTRACTIONS = [
     plants: [
       {
         id: 'dawupao', name: '大乌泡', nameEn: 'Dawupao / Rubus', latin: 'Rubus multibracteatus H. Lév. & Vaniot', pinyin: 'Da Wu Pao',
+        cardImg: 'assets/dawupao-card.webp',
         img: 'assets/dawupao-plant.webp',
         nameImg: 'assets/dawupao-name.png',
         patternImages: ['assets/dawupao-pattern-1.jpg', 'assets/dawupao-pattern-2.jpg', 'assets/dawupao-pattern-3.jpg'],
@@ -134,6 +140,7 @@ const ATTRACTIONS = [
       },
       {
         id: 'yunshi', name: '云实', nameEn: 'Yunshi', latin: 'Caesalpinia decapetala (Roth) Alston', pinyin: 'Yun Shi',
+        cardImg: 'assets/yunshi-card.webp',
         img: 'assets/yunshi-plant.webp',
         nameImg: 'assets/yunshi-name.png',
         patternImages: ['assets/yunshi-pattern-1.jpg', 'assets/yunshi-pattern-2.jpg'],
@@ -162,6 +169,7 @@ const ATTRACTIONS = [
   },
   {
     id: 'huangguoshu',
+    img: 'assets/huangguoshu-attraction.webp',
     name: '黄果树瀑布',
     nameEn: 'Huangguoshu Waterfall',
     x: 27.69, y: 22.36,         // 图中"黄果树瀑布"文字下方的墨圈圆心（像素级检测）
@@ -172,6 +180,7 @@ const ATTRACTIONS = [
     plants: [
       {
         id: 'tianma', name: '天麻', nameEn: 'Gastrodia / Tianma', latin: 'Gastrodia elata Bl.', pinyin: 'Tian Ma',
+        cardImg: 'assets/tianma-card.webp',
         /* 真实素材（提供时优先使用，否则回退 SVG 占位） */
         img: 'assets/tianma-plant.webp',   // 透明底 PNG 转 WebP（原图 3.6MB → 0.3MB）
         nameImg: 'assets/tianma-name.png',
@@ -200,6 +209,7 @@ const ATTRACTIONS = [
       },
       {
         id: 'chonglou', name: '重楼', nameEn: 'Chonglou / Seven-leaf Paris', latin: 'Paris polyphylla Sm.', pinyin: 'Chong Lou',
+        cardImg: 'assets/chonglou-card.webp',
         img: 'assets/chonglou-plant.webp',
         nameImg: 'assets/chonglou-name.png',
         patternImages: ['assets/chonglou-pattern-1.jpg', 'assets/chonglou-pattern-2.jpg', 'assets/chonglou-pattern-3.jpg'],
@@ -226,6 +236,7 @@ const ATTRACTIONS = [
       },
       {
         id: 'bajiaolian', name: '八角莲', nameEn: 'Bajiaolian', latin: 'Dysosma versipellis (Hance) M. Cheng ex T. H. Ying', pinyin: 'Ba Jiao Lian',
+        cardImg: 'assets/bajiaolian-card.webp',
         img: 'assets/bajiaolian-plant.webp',
         nameImg: 'assets/bajiaolian-name.png',
         patternImages: ['assets/bajiaolian-pattern-1.jpg', 'assets/bajiaolian-pattern-2.jpg', 'assets/bajiaolian-pattern-3.jpg'],
@@ -254,6 +265,7 @@ const ATTRACTIONS = [
   },
   {
     id: 'libo',
+    img: 'assets/libo-attraction.webp',
     name: '荔波小七孔',
     nameEn: 'Libo Xiaoqikong',
     x: 33.59, y: 36.82,         // 图中"荔波小七孔"文字下方的墨圈圆心
@@ -264,6 +276,7 @@ const ATTRACTIONS = [
     plants: [
       {
         id: 'tiepishihu', name: '铁皮石斛', nameEn: 'Shihu / Dendrobium', latin: 'Dendrobium officinale Kimura & Migo', pinyin: 'Shihu',
+        cardImg: 'assets/tiepishihu-card.webp',
         img: 'assets/dendrobium-plant.webp',
         nameImg: 'assets/dendrobium-name.png',
         patternImages: ['assets/dendrobium-pattern-1.jpg', 'assets/dendrobium-pattern-2.jpg', 'assets/dendrobium-pattern-3.jpg'],
@@ -290,6 +303,7 @@ const ATTRACTIONS = [
       },
       {
         id: 'jinguolan', name: '金果榄', nameEn: 'Jinguolan', latin: 'Tinospora sagittata (Oliv.) Gagnep.', pinyin: 'Jin Guo Lan',
+        cardImg: 'assets/jinguolan-card.webp',
         img: 'assets/jinguolan-plant.webp',
         nameImg: 'assets/jinguolan-name.png',
         patternImages: ['assets/jinguolan-pattern-1.jpg', 'assets/jinguolan-pattern-2.jpg', 'assets/jinguolan-pattern-3.jpg'],
@@ -316,6 +330,7 @@ const ATTRACTIONS = [
       },
       {
         id: 'guoluhuang', name: '过路黄', nameEn: 'Guoluhuang / Chinese Moneywort', latin: 'Lysimachia christinae Hance', pinyin: 'Guo Lu Huang',
+        cardImg: 'assets/guoluhuang-card.webp',
         img: 'assets/guoluhuang-plant.webp',
         nameImg: 'assets/guoluhuang-name.png',
         patternImages: ['assets/guoluhuang-pattern-1.jpg', 'assets/guoluhuang-pattern-2.jpg', 'assets/guoluhuang-pattern-3.jpg'],
@@ -344,6 +359,7 @@ const ATTRACTIONS = [
   },
   {
     id: 'wanfenglin',
+    img: 'assets/wanfenglin-attraction.webp',
     name: '万峰林',
     nameEn: 'Wanfenglin',
     x: 33.94, y: 54.13,         // 图中"万峰林"文字下方的墨圈圆心
@@ -354,6 +370,7 @@ const ATTRACTIONS = [
     plants: [
       {
         id: 'jinqiaomai', name: '金荞麦', nameEn: 'Jinqiaomai / Golden Buckwheat', latin: 'Fagopyrum dibotrys (D. Don) H. Hara', pinyin: 'Jin Qiao Mai',
+        cardImg: 'assets/jinqiaomai-card.webp',
         img: 'assets/jinqiaomai-plant.webp',
         nameImg: 'assets/jinqiaomai-name.png',
         patternImages: ['assets/jinqiaomai-pattern-1.jpg', 'assets/jinqiaomai-pattern-2.jpg', 'assets/jinqiaomai-pattern-3.jpg'],
@@ -380,6 +397,7 @@ const ATTRACTIONS = [
       },
       {
         id: 'ainaxiang', name: '艾纳香', nameEn: 'Ainaxiang / Blumea', latin: 'Blumea balsamifera (L.) DC.', pinyin: 'Ai Na Xiang',
+        cardImg: 'assets/ainaxiang-card.webp',
         img: 'assets/ainaxiang-plant.webp',
         nameImg: 'assets/ainaxiang-name.png',
         patternImages: ['assets/ainaxiang-pattern-1.jpg', 'assets/ainaxiang-pattern-2.jpg', 'assets/ainaxiang-pattern-3.jpg'],
@@ -408,6 +426,7 @@ const ATTRACTIONS = [
   },
   {
     id: 'malinghe',
+    img: 'assets/malinghe-attraction.webp',
     name: '马岭河峡谷',
     nameEn: 'Maling River Canyon',
     x: 27.88, y: 79.85,         // 图中"马岭河峡谷"文字下方的墨圈圆心
@@ -418,6 +437,7 @@ const ATTRACTIONS = [
     plants: [
       {
         id: 'duzhong', name: '杜仲', nameEn: 'Duzhong / Eucommia', latin: 'Eucommia ulmoides Oliv.', pinyin: 'Du Zhong',
+        cardImg: 'assets/duzhong-card.webp',
         img: 'assets/duzhong-plant.webp',
         nameImg: 'assets/duzhong-name.png',
         patternImages: ['assets/duzhong-pattern-1.jpg', 'assets/duzhong-pattern-2.jpg', 'assets/duzhong-pattern-3.jpg'],
@@ -444,6 +464,7 @@ const ATTRACTIONS = [
       },
       {
         id: 'xuduan', name: '续断', nameEn: 'Xuduan / Dipsacus', latin: 'Dipsacus asper Wall. ex C. B. Clarke', pinyin: 'Xu Duan',
+        cardImg: 'assets/xuduan-card.webp',
         img: 'assets/xuduan-plant.webp',
         nameImg: 'assets/xuduan-name.png',
         patternImages: ['assets/xuduan-pattern-1.jpg', 'assets/xuduan-pattern-2.jpg', 'assets/xuduan-pattern-3.jpg'],
