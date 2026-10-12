@@ -107,6 +107,8 @@ button {
   max-width: 96vw;
   overflow: hidden;
   background: transparent;
+  /* 仅柔影作缩放感知提示（无实色描边，保留长卷无边框意境）；阴影为像素单位，Ctrl+缩放时会变粗 */
+  box-shadow: 0 10px 30px rgba(31,61,43,0.18);
 }
 /* 手绘全景底图（透明底，透出羊皮纸背景） */
 .map-photo {
