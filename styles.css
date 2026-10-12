@@ -253,9 +253,10 @@ button {
   transition: transform .3s ease;
 }
 .plant-cta-en {
-  margin-top: 12px; text-align: center;
-  font-size: 15px; letter-spacing: 0.5px; line-height: 1.5; color: var(--ink-soft);
+  margin-top: 17px; text-align: center;
+  font-size: 15.6px; letter-spacing: 1.5px; line-height: 1.5; color: var(--ink-soft);
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
+  animation: floatUp 2.4s ease-in-out infinite;   /* 与首页提示语一致的浮动效果 */
 }
 /* L3/L4 顶部三按钮：上/下一种植物 + 返回地图（绝对居中，避开左上返回钮与右上名称图） */
 .plant-top {
