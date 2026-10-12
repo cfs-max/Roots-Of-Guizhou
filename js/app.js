@@ -241,13 +241,16 @@
     showView('plant');
   }
 
-  // L3 底部三按钮：左右为上/下一种植物的「植物页」，中间返回地图
+  // L3/L4 顶部三按钮：左右为上/下一种植物，中间返回地图（两页共用同一套按钮逻辑）
   function updatePlantNav() {
     const N = PLANT_SEQUENCE.length;
     const prevP = PLANT_SEQUENCE[(seqIndex - 1 + N) % N].plant;
     const nextP = PLANT_SEQUENCE[(seqIndex + 1) % N].plant;
-    document.getElementById('btnPrev').textContent = '← ' + prevP.pinyin;
-    document.getElementById('btnNext').textContent = nextP.pinyin + ' →';
+    const set = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
+    set('btnPrev', '← ' + prevP.pinyin);
+    set('btnNext', nextP.pinyin + ' →');
+    set('btnPrevP', '← ' + prevP.pinyin);
+    set('btnNextP', nextP.pinyin + ' →');
   }
 
   /* ---------- L4 纹路页 ---------- */
@@ -255,6 +258,7 @@
     seqIndex = (idx + PLANT_SEQUENCE.length) % PLANT_SEQUENCE.length;
     carIndex = 0;
     renderPattern();
+    updatePlantNav();
     // 进入 L4：还原默认鼠标
     document.getElementById('plantImg').classList.remove('pressed');
     showView('pattern');
@@ -299,6 +303,10 @@
   document.getElementById('btnMap').addEventListener('click', () => { closePopups(); showView('map'); });
   document.getElementById('patternNameImg').addEventListener('click', () => showView('plant'));   // 点名称图回 L3
   document.getElementById('patternBack').addEventListener('click', () => showView('plant'));      // L4 左上角返回按钮回 L3
+  // L4 顶部三按钮：左右切换上/下一种植物的纹路页，中间返回地图（样式与逻辑同 L3）
+  document.getElementById('btnPrevP').addEventListener('click', () => openPattern(seqIndex - 1));
+  document.getElementById('btnNextP').addEventListener('click', () => openPattern(seqIndex + 1));
+  document.getElementById('btnMapP').addEventListener('click', () => { closePopups(); showView('map'); });
   // L4 轮播左右
   document.getElementById('carPrev').addEventListener('click', () => { carIndex--; renderCarousel(renderCarousel._imgs); });
   document.getElementById('carNext').addEventListener('click', () => { carIndex++; renderCarousel(renderCarousel._imgs); });

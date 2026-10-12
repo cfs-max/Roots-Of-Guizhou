@@ -241,8 +241,8 @@ button {
   font-size: 15px; letter-spacing: 0.5px; line-height: 1.5; color: var(--ink-soft);
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
 }
-/* L3 顶部三按钮：上/下一种植物 + 返回地图（避开左上返回钮与右上名称图） */
-#plant .plant-top {
+/* L3/L4 顶部三按钮：上/下一种植物 + 返回地图（绝对居中，避开左上返回钮与右上名称图） */
+.plant-top {
   position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
   z-index: 9; padding: 0; gap: 8px;
   max-width: calc(100% - 190px);
@@ -354,8 +354,8 @@ button {
   .plant-side.right { text-align: left; border-top: 0.5px solid var(--paper-line) !important; padding-top: 90px; }
   .plant-side.left { border-bottom: 0.5px solid var(--paper-line) !important; }
   .plant-center img { max-height: 36vh; }
-  #plant .plant-top { top: 8px; max-width: calc(100% - 168px); gap: 6px; }
-  #plant .plant-top button { padding: 5px 9px; font-size: 10.8px; letter-spacing: 0.5px; }
+  .plant-top { top: 8px; max-width: calc(100% - 168px); gap: 6px; }
+  .plant-top button { padding: 5px 9px; font-size: 10.8px; letter-spacing: 0.5px; }
   .plant-name-img { width: 88px; right: 10px; }
   .popup { width: 44%; min-width: 0; padding: 9px 7px; }
   .popup-left { left: 5%; } .popup-right { right: 5%; }
