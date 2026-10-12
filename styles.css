@@ -57,7 +57,7 @@ button {
 .welcome-top {
   position: absolute; top: 20px; left: 0; right: 0;
   text-align: center; padding: 0 20px;
-  font-size: 13.2px; letter-spacing: 2px; color: var(--ink-soft);
+  font-size: 16.5px; letter-spacing: 2px; color: var(--ink-soft);
   font-family: "Helvetica Neue", Arial, sans-serif;
   opacity: 0.85;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
@@ -80,7 +80,7 @@ button {
 .welcome-title:active { transform: translateY(-1px) scale(0.99); }
 .welcome-hint {
   margin-top: 17px;
-  font-size: 15.6px; letter-spacing: 1.5px; color: var(--ink-soft);
+  font-size: 19.5px; letter-spacing: 1.5px; color: var(--ink-soft);
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
   animation: floatUp 2.4s ease-in-out infinite;
 }
@@ -90,7 +90,7 @@ button {
 }
 .welcome-foot {
   position: absolute; bottom: 18px; left: 0; right: 0; text-align: center;
-  font-size: 12px; letter-spacing: 1.5px; color: var(--ink-soft); opacity: .6;
+  font-size: 15px; letter-spacing: 1.5px; color: var(--ink-soft); opacity: .6;
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
 }
 
@@ -119,12 +119,12 @@ button {
 }
 .map-title {
   position: absolute; top: 11px; left: 13px;
-  font-size: 15.6px; letter-spacing: 2px; color: var(--green-deep);
+  font-size: 19.5px; letter-spacing: 2px; color: var(--green-deep);
   font-weight: 700;
 }
 .map-sub {
   position: absolute; top: 30px; left: 13px;
-  font-size: 10.8px; letter-spacing: 1px; color: var(--ink-soft);
+  font-size: 13.5px; letter-spacing: 1px; color: var(--ink-soft);
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
 }
 /* 景点 pin */
@@ -173,13 +173,13 @@ button {
 .popup-left { left: 3%; }
 .popup-right { right: 14%; }
 .popup h3 {
-  margin: 0 0 4px; font-size: 18px; color: var(--green-deep);
+  margin: 0 0 4px; font-size: 22.5px; color: var(--green-deep);
   letter-spacing: 1px; border-bottom: 1px solid rgba(181,112,58,0.40); padding-bottom: 6px;
 }
 .popup h3.en-title { font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; letter-spacing: 0.5px; }
-.popup .en { font-size: 10.8px; color: var(--terra); letter-spacing: 0.5px; margin-bottom: 6px;
+.popup .en { font-size: 13.5px; color: var(--terra); letter-spacing: 0.5px; margin-bottom: 6px;
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; }
-.popup p { margin: 0; font-size: 13.8px; line-height: 1.7; color: var(--ink); }
+.popup p { margin: 0; font-size: 17.2px; line-height: 1.7; color: var(--ink); }
 .popup-attraction-img {
   display: block; width: 100%; max-width: 205px; height: auto;
   border-radius: 8px; margin: 10px auto 8px;
@@ -188,7 +188,7 @@ button {
   background: rgba(255,255,255,0.35);
 }
 .popup .close {
-  position: absolute; top: 7px; right: 8px; font-size: 15px; color: #fff; line-height: 1;
+  position: absolute; top: 7px; right: 8px; font-size: 18.8px; color: #fff; line-height: 1;
   width: 21px; height: 21px; border-radius: 50%; cursor: pointer;
   background: rgba(181,112,58,0.85);
   display: flex; align-items: center; justify-content: center;
@@ -222,32 +222,32 @@ button {
   border-radius: 50%; border: 1.5px solid var(--terra);
   animation: pinPulse 1.8s ease-out infinite;
 }
-.plant-card .pc-name { font-size: 15px; color: var(--green-deep); font-weight: 600; }
-.plant-card .pc-name.en-title { font-size: 13.8px; font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; font-weight: 500; letter-spacing: 0.3px; }
+.plant-card .pc-name { font-size: 18.8px; color: var(--green-deep); font-weight: 600; }
+.plant-card .pc-name.en-title { font-size: 17.2px; font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; font-weight: 500; letter-spacing: 0.3px; }
 #plCards.no-head { padding-top: 18px; }
 #plCards.no-head .plant-card:first-child { margin-top: 0; }
-.plant-card .pc-en { font-size: 10.2px; color: var(--ink-soft); font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; }
+.plant-card .pc-en { font-size: 12.8px; color: var(--ink-soft); font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; }
 
 /* ============ L3 植物页 ============ */
 #plant { flex-direction: row; align-items: stretch; height: 100%; }
 .plant-side {
   flex: 1.6; padding: 26px 24px; overflow-y: auto;
   display: flex; flex-direction: column; justify-content: center;
-  font-size: 18px; line-height: 1.75; color: var(--ink);
+  font-size: 22.5px; line-height: 1.75; color: var(--ink);
 }
 /* 右侧列顶部让出名称图（约 89px 高，位于 top:8/right:16，底沿约 y=97），避免文字与之重叠 */
 .plant-side.right { text-align: right; padding-top: 76px; flex: 1.6; }
 .plant-side.left { flex: 1.6; }   /* 左/右等宽，中栏 1.2 居中标本图 */
-.plant-side .ptag { font-size: 12.5px; letter-spacing: 1.5px; color: var(--terra);
+.plant-side .ptag { font-size: 15.6px; letter-spacing: 1.5px; color: var(--terra);
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; margin-bottom: 5px; }
 /* 结构化字段块：字段名加粗 + 值换行 */
 .plant-side .pf { margin: 0 0 10px; }
 .plant-side .pf b {
-  display: block; font-size: 13.5px; font-weight: 700; letter-spacing: 1px;
+  display: block; font-size: 16.9px; font-weight: 700; letter-spacing: 1px;
   color: var(--terra); font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; margin-bottom: 2px;
 }
 .plant-side .pf span {
-  display: block; font-size: 15.5px; line-height: 1.6; color: var(--ink);
+  display: block; font-size: 19.4px; line-height: 1.6; color: var(--ink);
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
 }
 .plant-center {
@@ -262,7 +262,7 @@ button {
 }
 .plant-cta-en {
   margin-top: 17px; text-align: center;
-  font-size: 15.6px; letter-spacing: 1.5px; line-height: 1.5; color: var(--ink-soft);
+  font-size: 19.5px; letter-spacing: 1.5px; line-height: 1.5; color: var(--ink-soft);
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
   animation: floatUp 2.4s ease-in-out infinite;   /* 与首页提示语一致的浮动效果 */
 }
@@ -287,11 +287,11 @@ button {
 .plant-center .pname {
   margin-top: 11px; text-align: center;
 }
-.plant-center .pname .cn { font-size: 26px; color: var(--green-deep); font-weight: 700; letter-spacing: 2px; }
-.plant-center .pname .lt { font-size: 14px; color: var(--ink-soft); font-style: italic;
+.plant-center .pname .cn { font-size: 32.5px; color: var(--green-deep); font-weight: 700; letter-spacing: 2px; }
+.plant-center .pname .lt { font-size: 17.5px; color: var(--ink-soft); font-style: italic;
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; margin-top: 2px; }
 .plant-center .cta {
-  margin-top: 7px; font-size: 14px; color: var(--terra); letter-spacing: 1px;
+  margin-top: 7px; font-size: 17.5px; color: var(--terra); letter-spacing: 1px;
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
 }
 
@@ -310,7 +310,7 @@ button {
 .pattern-top button {
   padding: 7px 13px; border-radius: 20px;
   background: var(--green-deep); color: var(--parch);
-  font-size: 12px; letter-spacing: 1px; white-space: nowrap;
+  font-size: 15px; letter-spacing: 1px; white-space: nowrap;
   box-shadow: 0 2px 6px rgba(31,61,43,0.3);
   transition: transform .2s ease, background .2s ease;
 }
@@ -319,8 +319,8 @@ button {
 .pattern-name {
   margin: 4px 0 2px; text-align: center; cursor: pointer;
 }
-.pattern-name .cn { font-size: 21.6px; color: var(--green-deep); font-weight: 700; letter-spacing: 2px; }
-.pattern-name .lt { font-size: 10.8px; color: var(--ink-soft); font-style: italic;
+.pattern-name .cn { font-size: 27px; color: var(--green-deep); font-weight: 700; letter-spacing: 2px; }
+.pattern-name .lt { font-size: 13.5px; color: var(--ink-soft); font-style: italic;
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; }
 .pattern-name:active .cn { color: var(--terra); }
 .carousel {
@@ -358,7 +358,7 @@ button {
   min-height: 56px;   /* 预留两行高度，避免脚注行数不同时整组垂直跳动 */
 }
 .pf-item {
-  font-size: 10.8px; letter-spacing: 1px; line-height: 1.6;
+  font-size: 13.5px; letter-spacing: 1px; line-height: 1.6;
   color: var(--ink-soft); text-transform: uppercase; text-align: center;
   max-width: 92%;
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif;
@@ -371,7 +371,7 @@ button {
   position: absolute; top: 12px; left: 12px; z-index: 8;
   width: 32px; height: 32px; border-radius: 50%;
   background: rgba(247,240,222,0.9); color: var(--green-deep);
-  font-size: 17px; display: flex; align-items: center; justify-content: center;
+  font-size: 21.2px; display: flex; align-items: center; justify-content: center;
   box-shadow: var(--shadow); border: 0.5px solid rgba(47,93,63,0.3);
 }
 .back-float:active { transform: scale(0.94); }
@@ -379,15 +379,15 @@ button {
 
 /* ============ 响应式（窄屏：列堆叠） ============ */
 @media (max-width: 680px) {
-  .welcome-title { font-size: 32px; letter-spacing: 2px; }
-  .welcome-top { font-size: 10.2px; letter-spacing: 0.5px; white-space: normal; }
+  .welcome-title { font-size: 40px; letter-spacing: 2px; }
+  .welcome-top { font-size: 12.8px; letter-spacing: 0.5px; white-space: normal; }
   #plant { flex-direction: column; overflow-y: auto; justify-content: center; }
   .plant-side { flex: none; border: none !important; padding: 12px 15px; }
   .plant-side.right { text-align: left; border-top: 0.5px solid var(--paper-line) !important; padding-top: 68px; }
   .plant-side.left { border-bottom: 0.5px solid var(--paper-line) !important; }
   .plant-center img { max-height: 36vh; }
   .plant-top { top: 8px; max-width: calc(100% - 168px); gap: 6px; }
-  .plant-top button { padding: 5px 9px; font-size: 10.8px; letter-spacing: 0.5px; }
+  .plant-top button { padding: 5px 9px; font-size: 13.5px; letter-spacing: 0.5px; }
   .plant-name-img { width: 88px; right: 10px; }
   .pattern-foot { min-height: 84px; }   /* 窄屏脚注可能换 3 行，同样预留固定高度防跳动 */
   .popup { width: 44%; min-width: 0; padding: 9px 7px; }
