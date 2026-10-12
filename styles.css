@@ -350,7 +350,7 @@ button {
 
 /* ============ 静音 / 播放按钮 ============ */
 .mute-btn {
-  position: fixed; right: 16px; bottom: 16px;
+  position: fixed; left: 16px; bottom: 16px;
   width: 44px; height: 44px; border-radius: 50%;
   border: 1px solid rgba(47,93,63,0.4);
   background: rgba(247,240,222,0.85);
