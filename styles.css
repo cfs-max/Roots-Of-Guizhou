@@ -165,7 +165,7 @@ button {
   border-radius: 8px; padding: 13px 12px;
   box-shadow: var(--shadow);
   z-index: 5;
-  max-height: 80vh; overflow-y: auto;
+  max-height: 92vh; overflow-y: auto;
   transition: opacity .3s ease, transform .3s ease;
 }
 .popup-left { left: 14%; }
@@ -179,8 +179,8 @@ button {
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; }
 .popup p { margin: 0; font-size: 13.8px; line-height: 1.7; color: var(--ink); }
 .popup-attraction-img {
-  display: block; width: 100%; height: auto;
-  border-radius: 6px; margin: 9px 0 7px;
+  display: block; width: 100%; max-width: 150px; height: auto;
+  border-radius: 6px; margin: 9px auto 7px;
   border: 0.5px solid rgba(47,93,63,0.3);
   background: rgba(255,255,255,0.4);
 }
