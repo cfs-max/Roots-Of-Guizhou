@@ -328,7 +328,7 @@ button {
 }
 .dots i.on { background: var(--terra); }
 .pattern-foot {
-  display: flex; justify-content: space-between; align-items: flex-end;
+  display: flex; justify-content: space-between; align-items: flex-start;
   width: 100%; padding: 6px 16px 12px; gap: 12px;
 }
 .pf-item {
