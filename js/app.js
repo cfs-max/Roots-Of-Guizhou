@@ -186,9 +186,8 @@
     const rootRect = root.getBoundingClientRect();
     const vw = window.innerWidth;
     const gap = 10;
-    // 弹窗宽度（与 CSS：宽 30%，上限 200、下限 130 保持一致）
-    let pw = Math.min(vw * 0.30, 200);
-    if (pw < 130) pw = 130;
+    // 取弹窗实际渲染宽度（与 CSS 当前宽度一致），避免估算偏小导致左弹窗右伸盖住地图
+    const pw = popupLeft.offsetWidth || Math.min(vw * 0.33, 285);
     const leftEdge = mapRect.left - rootRect.left;
     const rightEdge = mapRect.right - rootRect.left;
     const leftSpace = leftEdge;
