@@ -197,8 +197,8 @@ button {
   display: flex; flex-direction: column; justify-content: center;
   font-size: 15.6px; line-height: 1.9; color: var(--ink);
 }
-/* 右侧列顶部让出名称图（约 89px 高，位于 top:12/right:16），避免文字与之重叠 */
-.plant-side.right { text-align: right; padding-top: 112px; }
+/* 右侧列顶部让出名称图（约 89px 高，位于 top:8/right:16，底沿约 y=97），避免文字与之重叠 */
+.plant-side.right { text-align: right; padding-top: 104px; }
 .plant-side.left { }
 .plant-side .ptag { font-size: 10.8px; letter-spacing: 1.5px; color: var(--terra);
   font-family: "Helvetica Neue", Arial, sans-serif; margin-bottom: 5px; }
@@ -337,7 +337,7 @@ button {
   .welcome-top { font-size: 10.2px; letter-spacing: 0.5px; white-space: normal; }
   #plant { flex-direction: column; overflow-y: auto; justify-content: center; }
   .plant-side { flex: none; border: none !important; padding: 12px 15px; }
-  .plant-side.right { text-align: left; border-top: 0.5px solid var(--paper-line) !important; padding-top: 96px; }
+  .plant-side.right { text-align: left; border-top: 0.5px solid var(--paper-line) !important; padding-top: 90px; }
   .plant-side.left { border-bottom: 0.5px solid var(--paper-line) !important; }
   .plant-center img { max-height: 36vh; }
   #plant .plant-top { top: 8px; max-width: calc(100% - 168px); gap: 6px; }
@@ -371,7 +371,7 @@ button {
 /* ============ 植物名称图片（L3/L4 右上角） ============ */
 #plant, #pattern { position: relative; }
 .plant-name-img {
-  position: absolute; top: 12px; right: 16px;
+  position: absolute; top: 8px; right: 16px;
   width: 110px; height: auto; z-index: 10;
   object-fit: contain;
 }
