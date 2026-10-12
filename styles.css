@@ -211,15 +211,15 @@ button {
 .plant-thumb { position: relative; flex-shrink: 0; line-height: 0; }
 /* 植物标记点：样式同 L2 地图景点标记点（陶土圆点 + 白边 + 阴影 + 呼吸/脉冲） */
 .plant-dot {
-  position: absolute; right: -5px; bottom: -5px;
-  width: 15px; height: 15px; border-radius: 50%;
-  background: var(--terra); border: 2px solid #fff;
-  box-shadow: 0 2px 6px rgba(31,61,43,0.4);
+  position: absolute; right: 5px; bottom: 5px;
+  width: 11px; height: 11px; border-radius: 50%;
+  background: var(--terra); border: 1.5px solid #fff;
+  box-shadow: 0 2px 5px rgba(31,61,43,0.4);
   animation: pinBreathe 1.8s ease-in-out infinite;
 }
 .plant-dot::after {
-  content: ""; position: absolute; inset: -4px;
-  border-radius: 50%; border: 2px solid var(--terra);
+  content: ""; position: absolute; inset: -3px;
+  border-radius: 50%; border: 1.5px solid var(--terra);
   animation: pinPulse 1.8s ease-out infinite;
 }
 .plant-card .pc-name { font-size: 15px; color: var(--green-deep); font-weight: 600; }
