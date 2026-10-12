@@ -102,12 +102,13 @@ button {
 }
 .map-canvas {
   position: relative;
-  height: min(94vh, 1180px);
+  height: min(96vh, 1320px);
   aspect-ratio: 1024 / 1536;          /* 与山水长卷胜景图等比 */
-  max-width: 96vw;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
+  max-width: 97vw;
+  /* 加可见边界（像素单位，Ctrl+缩放时会变粗），让地图随整页缩放时被明显感知到也在放大 */
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 12px;
+  box-shadow: 0 10px 32px rgba(31,61,43,0.22), inset 0 0 0 1px rgba(200,164,90,0.22);
   overflow: hidden;
   background: transparent;
 }
