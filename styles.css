@@ -102,13 +102,12 @@ button {
 }
 .map-canvas {
   position: relative;
-  height: min(94vh, 1180px);
+  /* 去掉"始终完整包含在视口"的限制：允许地图比视口更高，低倍缩放时即明显溢出、放大被肉眼感知 */
+  height: min(150vh, 1700px);
   aspect-ratio: 1024 / 1536;          /* 与山水长卷胜景图等比 */
   max-width: 96vw;
   overflow: hidden;
   background: transparent;
-  /* 仅柔影作缩放感知提示（无实色描边，保留长卷无边框意境）；阴影为像素单位，Ctrl+缩放时会变粗 */
-  box-shadow: 0 10px 30px rgba(31,61,43,0.18);
 }
 /* 手绘全景底图（透明底，透出羊皮纸背景） */
 .map-photo {
