@@ -102,9 +102,9 @@ button {
 }
 .map-canvas {
   position: relative;
-  height: min(90vh, 920px);
+  height: min(94vh, 1180px);
   aspect-ratio: 1024 / 1536;          /* 与山水长卷胜景图等比 */
-  max-width: 92vw;
+  max-width: 96vw;
   border: none;
   box-shadow: none;
   border-radius: 0;
@@ -135,13 +135,13 @@ button {
 }
 .pin .dot {
   position: relative;
-  width: 16px; height: 16px; border-radius: 50%;
+  width: clamp(12px, 1.7vmin, 22px); height: clamp(12px, 1.7vmin, 22px); border-radius: 50%;
   background: var(--terra); border: 2px solid #fff;
   box-shadow: 0 2px 6px rgba(31,61,43,0.4);
   animation: pinBreathe 1.8s ease-in-out infinite;
 }
 .pin .dot::after {
-  content: ""; position: absolute; inset: -4px;
+  content: ""; position: absolute; inset: -30%;
   border-radius: 50%; border: 2px solid var(--terra);
   animation: pinPulse 1.8s ease-out infinite;
 }
