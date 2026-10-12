@@ -161,8 +161,8 @@ button {
   width: 30%; min-width: 130px; max-width: 215px;
   /* 毛玻璃：底色更通透(0.55) + 更强模糊(10px) + 轻微增色，透出地图底图 */
   background: rgba(247,240,222,0.32);
-  -webkit-backdrop-filter: blur(11px) saturate(1.25);
-  backdrop-filter: blur(11px) saturate(1.25);
+  -webkit-backdrop-filter: blur(6px) saturate(1.2);
+  backdrop-filter: blur(6px) saturate(1.2);
   border: 1px solid rgba(255,255,255,0.55);   /* 玻璃边缘高光 */
   border-radius: 13px; padding: 14px 13px;
   box-shadow: 0 10px 30px rgba(31,61,43,0.28), inset 0 1px 0 rgba(255,255,255,0.6);
