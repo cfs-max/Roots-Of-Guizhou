@@ -212,8 +212,8 @@ button {
   font-size: 18px; line-height: 1.75; color: var(--ink);
 }
 /* 右侧列顶部让出名称图（约 89px 高，位于 top:8/right:16，底沿约 y=97），避免文字与之重叠 */
-.plant-side.right { text-align: right; padding-top: 104px; flex: 2; }
-.plant-side.left { flex: 1.4; }   /* 收窄左侧，给右侧更多宽度，使长字段(如 Folk Experience)由 3 行变 2 行 */
+.plant-side.right { text-align: right; padding-top: 76px; flex: 1.6; }
+.plant-side.left { flex: 1.6; }   /* 左/右等宽，中栏 1.2 居中标本图 */
 .plant-side .ptag { font-size: 12.5px; letter-spacing: 1.5px; color: var(--terra);
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; margin-bottom: 5px; }
 /* 结构化字段块：字段名加粗 + 值换行 */
@@ -357,7 +357,7 @@ button {
   .welcome-top { font-size: 10.2px; letter-spacing: 0.5px; white-space: normal; }
   #plant { flex-direction: column; overflow-y: auto; justify-content: center; }
   .plant-side { flex: none; border: none !important; padding: 12px 15px; }
-  .plant-side.right { text-align: left; border-top: 0.5px solid var(--paper-line) !important; padding-top: 90px; }
+  .plant-side.right { text-align: left; border-top: 0.5px solid var(--paper-line) !important; padding-top: 68px; }
   .plant-side.left { border-bottom: 0.5px solid var(--paper-line) !important; }
   .plant-center img { max-height: 36vh; }
   .plant-top { top: 8px; max-width: calc(100% - 168px); gap: 6px; }
