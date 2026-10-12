@@ -271,7 +271,7 @@ button {
 }
 
 /* ============ L4 纹路页 ============ */
-#pattern { align-items: center; height: 100%; }
+#pattern { align-items: center; justify-content: center; height: 100%; padding: 56px 0 12px; }
 /* 进入 L4 的过渡：淡入 + 轻微缩放（display 切换时会重新触发） */
 @keyframes viewFadeIn {
   from { opacity: 0; transform: scale(0.985); }
@@ -299,8 +299,8 @@ button {
   font-family: "BigCaslon", "Songti SC", "STSong", "Noto Serif SC", "Times New Roman", serif; }
 .pattern-name:active .cn { color: var(--terra); }
 .carousel {
-  flex: 1; min-height: 0; width: 100%; display: flex; align-items: center; justify-content: center;
-  position: relative; padding: 54px 10px 24px;   /* 顶部留白 = 按钮底(≈44px) + 10px 间距 */
+  flex: 0 0 auto; min-height: 0; width: 100%; display: flex; align-items: center; justify-content: center;
+  position: relative; padding: 0 10px;   /* 不再占满整列，让下方脚注紧贴展示区 */
 }
 .carousel img {
   /* 固定展示尺寸：所有轮播图统一以正方形框呈现，object-fit 保证不变形、不裁切 */
