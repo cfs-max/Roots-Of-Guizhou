@@ -102,8 +102,7 @@ button {
 }
 .map-canvas {
   position: relative;
-  /* 去掉"始终完整包含在视口"的限制：允许地图比视口更高，低倍缩放时即明显溢出、放大被肉眼感知 */
-  height: min(150vh, 1700px);
+  height: min(94vh, 1180px);
   aspect-ratio: 1024 / 1536;          /* 与山水长卷胜景图等比 */
   max-width: 96vw;
   overflow: hidden;
