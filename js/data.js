@@ -203,8 +203,8 @@ const ATTRACTIONS = [
           ['Pattern', 'Tuber motifs, fungal-thread patterns, branching root-like lines, and continuous maple-leaf motifs.']
         ],
         /* L4 轮播图下方两行说明（缺省时使用通用文案） */
-        footL: 'CULTURAL SYMBOL | BUTTERFLY MOTHER',
-        footR: 'PATTERN | BUTTERFLY / MAPLE LEAF PATTERN',
+        footL: 'CULTURAL SYMBOL | MAPLE TREE / FOREST-LIFE MOTIF.',
+        footR: 'PATTERN | TUBER MOTIFS, FUNGAL-THREAD PATTERNS, BRANCHING ROOT-LIKE LINES, AND CONTINUOUS MAPLE-LEAF MOTIFS.',
         patternCount: 3
       },
       {
@@ -230,8 +230,8 @@ const ATTRACTIONS = [
           ['Pattern', 'Seven-leaf radial motif: seven whorled leaves transformed into a centered, radial, symmetrical geometric pattern.']
         ],
         /* L4 轮播图下方两行说明（缺省时使用通用文案） */
-        footL: 'CULTURAL SYMBOL | BUTTERFLY MOTHER / LIFE-AND-REPRODUCTION MOTIF',
-        footR: 'PATTERN | BUTTERFLY MOTHER / LIFE-AND-REPRODUCTION MOTIF',
+        footL: 'CULTURAL SYMBOL | BUTTERFLY MOTHER / LIFE-AND-REPRODUCTION MOTIF.',
+        footR: 'PATTERN | SEVEN-LEAF RADIAL MOTIF: SEVEN WHORLED LEAVES TRANSFORMED INTO A CENTERED, RADIAL, SYMMETRICAL GEOMETRIC PATTERN.',
         patternCount: 3
       },
       {
