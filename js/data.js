@@ -179,7 +179,7 @@ const ATTRACTIONS = [
     intro: 'Located in Anshun, Guizhou, Huangguoshu Waterfall is one of China’s most famous large waterfall systems. Its powerful main cascade is surrounded by karst cliffs, caves, and lush vegetation, making it an iconic landscape of Guizhou.',
     plants: [
       {
-        id: 'tianma', name: '天麻', nameEn: 'Gastrodia / Tianma', latin: 'Gastrodia elata Bl.', pinyin: 'Tian Ma',
+        id: 'tianma', name: '天麻', nameEn: 'Tianma / Gastrodia', latin: 'Gastrodia elata Bl.', pinyin: 'Tian Ma',
         cardImg: 'assets/tianma-card.webp',
         /* 真实素材（提供时优先使用，否则回退 SVG 占位） */
         img: 'assets/tianma-plant.webp',   // 透明底 PNG 转 WebP（原图 3.6MB → 0.3MB）
@@ -189,7 +189,7 @@ const ATTRACTIONS = [
         descR: '块茎富含天麻素，平肝息风、止痉通络，为黔地苗医、土家医常用的镇惊之品，亦入药膳炖汤。',
         /* 植物页结构化字段块（字段名加粗展示），存在时优先于 descL / descR */
         blocksL: [
-          ['Chinese Name', 'Gastrodia / Tianma'],
+          ['Chinese Name', 'Tianma / Gastrodia'],
           ['Scientific Name', 'Gastrodia elata Blume'],
           ['Medicinal Nature', 'Sweet in taste and neutral in nature.'],
           ['Habitat & Distribution', 'Found in mountainous forests and shaded, humid understories in Guizhou. Gastrodia lacks green leaves and obtains nutrients through fungal symbiosis, making it closely dependent on the underground forest ecosystem.'],
