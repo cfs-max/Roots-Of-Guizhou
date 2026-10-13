@@ -305,9 +305,9 @@
   document.getElementById('btnMap').addEventListener('click', () => { closePopups(); showView('map'); });
   document.getElementById('patternNameImg').addEventListener('click', () => showView('plant'));   // 点名称图回 L3
   document.getElementById('patternBack').addEventListener('click', () => showView('plant'));      // L4 左上角返回按钮回 L3
-  // L4 顶部三按钮：左右切换上/下一种植物的纹路页，中间返回地图（样式与逻辑同 L3）
-  document.getElementById('btnPrevP').addEventListener('click', () => openPattern(seqIndex - 1));
-  document.getElementById('btnNextP').addEventListener('click', () => openPattern(seqIndex + 1));
+  // L4 顶部三按钮：左右切换到上/下一种植物的 L3 植物页，中间返回地图（样式与逻辑同 L3）
+  document.getElementById('btnPrevP').addEventListener('click', () => openPlant(seqIndex - 1));
+  document.getElementById('btnNextP').addEventListener('click', () => openPlant(seqIndex + 1));
   document.getElementById('btnMapP').addEventListener('click', () => { closePopups(); showView('map'); });
   // L4 轮播左右
   document.getElementById('carPrev').addEventListener('click', () => { carIndex--; renderCarousel(renderCarousel._imgs); });
