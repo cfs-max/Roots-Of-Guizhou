@@ -114,7 +114,7 @@
   const popupLeft = document.getElementById('popupLeft');
   const popupRight = document.getElementById('popupRight');
 
-  // 注入 pin（底图为 assets/guizhou-map.jpg 手绘全景图）
+  // 注入 pin（底图为 assets/guizhou-map-v2.webp 横向水墨名胜图）
   ATTRACTIONS.forEach(a => {
     const pin = document.createElement('div');
     pin.className = 'pin';

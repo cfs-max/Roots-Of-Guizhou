@@ -103,7 +103,7 @@ button {
 .map-canvas {
   position: relative;
   height: min(94vh, 1180px);
-  aspect-ratio: 1024 / 1536;          /* 与山水长卷胜景图等比 */
+  aspect-ratio: 1448 / 1086;          /* 横向水墨名胜图 4:3 */
   max-width: 96vw;
   overflow: hidden;
   background: transparent;
@@ -168,7 +168,7 @@ button {
   transition: opacity .3s ease, transform .3s ease;
 }
 .popup-left { left: 3%; }
-.popup-right { right: 14%; }
+.popup-right { right: 3%; }
 .popup h3 {
   margin: 0 0 4px; font-size: 22.5px; color: var(--green-deep);
   letter-spacing: 1px; border-bottom: 1px solid rgba(181,112,58,0.40); padding-bottom: 6px;
@@ -389,7 +389,7 @@ button {
   .pattern-foot { min-height: 84px; }   /* 窄屏脚注可能换 3 行，同样预留固定高度防跳动 */
   .popup { width: 44%; min-width: 0; padding: 9px 7px; }
   .popup-left { left: 5%; } .popup-right { right: 5%; }
-  .map-canvas { width: 96vw; height: 78vh; }
+  .map-canvas { width: 96vw; height: auto; aspect-ratio: 1448 / 1086; }
 }
 
 /* ============ 静音 / 播放按钮 ============ */

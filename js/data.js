@@ -11,7 +11,7 @@ const ATTRACTIONS = [
     img: 'assets/fanjingshan-attraction.webp',
     name: '梵净山',
     nameEn: 'Fanjingshan',
-    x: 91.36, y: 21.00,         // 图中"梵净山"文字下方的墨圈圆心
+    x: 86.54, y: 21.77,         // 水墨名胜图："梵净山"红色印章质心（与印章重叠）
     nameEnOnly: true,           // 弹窗标题只显示英文名（占据原中文名位置）
     hidePlantHead: true,        // 右侧植物弹窗去掉标题行，直接展示植物卡片
     plantEnOnly: true,          // 植物卡片只显示英文名，不显示中文名
@@ -105,7 +105,7 @@ const ATTRACTIONS = [
     img: 'assets/xijiang-attraction.webp',
     name: '西江千户苗寨',
     nameEn: 'Xijiang Qianhu Miao Village',
-    x: 88.33, y: 63.25,         // 图中"西江千户苗寨"文字下方的墨圈圆心
+    x: 93.89, y: 55.25,         // 水墨名胜图："西江千户苗寨"红色印章质心（与印章重叠）
     nameEnOnly: true,           // 弹窗标题只显示英文名（占据原中文名位置）
     hidePlantHead: true,        // 右侧植物弹窗去掉标题行，直接展示植物卡片
     plantEnOnly: true,          // 植物卡片只显示英文名，不显示中文名
@@ -172,7 +172,7 @@ const ATTRACTIONS = [
     img: 'assets/huangguoshu-attraction.webp',
     name: '黄果树瀑布',
     nameEn: 'Huangguoshu Waterfall',
-    x: 27.69, y: 22.36,         // 图中"黄果树瀑布"文字下方的墨圈圆心（像素级检测）
+    x: 16.06, y: 47.20,         // 水墨名胜图："黄果树瀑布"红色印章质心（与印章重叠）
     nameEnOnly: true,           // 弹窗标题只显示英文名（占据原中文名位置）
     hidePlantHead: true,        // 右侧植物弹窗去掉标题行，直接展示植物卡片
     plantEnOnly: true,          // 植物卡片只显示英文名，不显示中文名
@@ -268,7 +268,7 @@ const ATTRACTIONS = [
     img: 'assets/libo-attraction.webp',
     name: '荔波小七孔',
     nameEn: 'Libo Xiaoqikong',
-    x: 33.59, y: 36.82,         // 图中"荔波小七孔"文字下方的墨圈圆心
+    x: 87.18, y: 75.80,         // 水墨名胜图："荔波小七孔"红色印章质心（与印章重叠）
     nameEnOnly: true,           // 弹窗标题只显示英文名（占据原中文名位置）
     hidePlantHead: true,        // 右侧植物弹窗去掉标题行，直接展示植物卡片
     plantEnOnly: true,          // 植物卡片只显示英文名，不显示中文名
@@ -362,7 +362,7 @@ const ATTRACTIONS = [
     img: 'assets/wanfenglin-attraction.webp',
     name: '万峰林',
     nameEn: 'Wanfenglin',
-    x: 33.94, y: 54.13,         // 图中"万峰林"文字下方的墨圈圆心
+    x: 32.14, y: 89.83,         // 水墨名胜图："万峰林"红色印章质心（与印章重叠）
     nameEnOnly: true,           // 弹窗标题只显示英文名（占据原中文名位置）
     hidePlantHead: true,        // 右侧植物弹窗去掉标题行，直接展示植物卡片
     plantEnOnly: true,          // 植物卡片只显示英文名，不显示中文名
@@ -429,7 +429,7 @@ const ATTRACTIONS = [
     img: 'assets/malinghe-attraction.webp',
     name: '马岭河峡谷',
     nameEn: 'Maling River Canyon',
-    x: 27.88, y: 79.85,         // 图中"马岭河峡谷"文字下方的墨圈圆心
+    x: 11.08, y: 78.61,         // 水墨名胜图："马岭河峡谷"红色印章质心（与印章重叠）
     nameEnOnly: true,           // 弹窗标题只显示英文名（占据原中文名位置）
     hidePlantHead: true,        // 右侧植物弹窗去掉标题行，直接展示植物卡片
     plantEnOnly: true,          // 植物卡片只显示英文名，不显示中文名
